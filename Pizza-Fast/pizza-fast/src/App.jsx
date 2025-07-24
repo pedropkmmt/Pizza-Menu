@@ -9,9 +9,8 @@ function App(){
          <div className='container'>
         <Header/>
         <ul className='pizzas'>
-            {pizzaData.map((pizza) => (
-            <Pizza pizzaObji= {pizza} key={pizza.name}/>
-        ))}</ul>
+            <Pizza/>
+       </ul>
         <Footer/>
         </div>  
         </>
