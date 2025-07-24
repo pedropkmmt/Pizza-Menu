@@ -4,6 +4,7 @@ function Pizza(){
         <>
     {pizzaData.map((pizza, key) => (
             <div className='pizza'>
+                {key = pizza.name}
             <img src={pizza.photoName} alt={pizza.photoName} />
             <h2>{pizza.name}</h2>
             <span>R{pizza.price}</span>

@@ -10,6 +10,19 @@ const Footer = () => {
         alert("We are closed")
      }
         */
+       if (!isOpen){
+        return(
+            <>
+            <footer className="footer">
+                <div className="order">
+                    <p>Closed Opens At {openHour}:00am</p>
+                    <button className="btnclosed">Order</button>
+                </div>
+              </footer>
+            </>
+          
+        )
+       }else{
   
     return(
         <>
@@ -21,5 +34,6 @@ const Footer = () => {
         </footer>
         </>
     )
+}
 }
 export default Footer
