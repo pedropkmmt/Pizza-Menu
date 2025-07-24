@@ -1,13 +1,19 @@
-import '../data'
-function Pizza(props){
+import pizzaData from '../data'
+function Pizza(){
     return(
         <>
-        <div className ="pizza">
-        <img src={props.photoName} alt="spinaci pizza" />
-        <h2>{props.name}</h2>
-        <h2>R{props.price}</h2>
-        <p>{props.ingredients}</p>
-         </div>
+       
+            {pizzaData.map((pizza, key) => (
+            <div className ="pizzas">
+                <div className="pizza">
+                <img src={pizza.photoName} alt={pizza.name} />
+                <h2 >{pizza.name}</h2>
+                <h2>R{pizza.price}</h2>
+                <p>{pizza.ingredients}</p>
+                </div>
+            </div>
+            ))}
+        
         </>
     )
 }
