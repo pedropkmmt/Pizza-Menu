@@ -2,12 +2,16 @@ import './index.css'
 import Pizza from './Components/Pizzas'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import pizzaData from './data'
 function App(){
     return(
         <>
          <div className='container'>
         <Header/>
-        <Pizza/>
+        <ul className='pizzas'>
+            {pizzaData.map((pizza) => (
+            <Pizza pizzaObji= {pizza} key={pizza.name}/>
+        ))}</ul>
         <Footer/>
         </div>  
         </>
