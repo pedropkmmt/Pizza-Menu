@@ -2,7 +2,6 @@ import pizzaData from '../data'
 function Pizza(){
     return(
         <>
-       
     {pizzaData.map((pizza, key) => (
             <div className='pizza'>
             <img src={pizza.photoName} alt={pizza.photoName} />

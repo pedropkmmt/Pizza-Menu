@@ -2,6 +2,7 @@ const Footer = () => {
     const hour = new Date().getHours();
     const openHour = 9
     const closedHour = 18
+    const isOpen = hour >= openHour && hour <= closedHour;
     /* if (hour >= openHour && hour <= closedHour){
         alert("We are open")
      }
@@ -13,7 +14,10 @@ const Footer = () => {
     return(
         <>
         <footer className="footer">
-            {new Date().toLocaleDateString()}" We're currently open!"
+            <div className="order">
+            {isOpen == true ? <p>We're Currently open until {closedHour}:00pm</p> : <p>Closed Opens At {openHour}:00am</p>}
+            <button className="btn">Order</button>
+            </div>
         </footer>
         </>
     )
