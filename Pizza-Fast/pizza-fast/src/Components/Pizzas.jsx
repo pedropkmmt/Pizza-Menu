@@ -1,10 +1,12 @@
-function Pizza(){
+import '../data'
+function Pizza(props){
     return(
         <>
         <div className ="pizza">
-        <img src="spinaci.jpg" alt="spinaci pizza" />
-        <h2>Pizza Spinaci</h2>
-        <p>Tomato, mozarella , spinach , and ricotta cheese</p>
+        <img src={props.photoName} alt="spinaci pizza" />
+        <h2>{props.name}</h2>
+        <h2>R{props.price}</h2>
+        <p>{props.ingredients}</p>
          </div>
         </>
     )
