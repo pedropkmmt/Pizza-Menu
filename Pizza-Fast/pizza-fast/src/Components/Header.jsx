@@ -2,7 +2,7 @@ const Header = () => {
     return (
       <>
         <header className="header">
-          <h1>Fast Italian Pizza</h1>
+          <h1>Fast  Pizza</h1>
         </header>
         <div className="menu">
           <h2>Our Menu</h2>

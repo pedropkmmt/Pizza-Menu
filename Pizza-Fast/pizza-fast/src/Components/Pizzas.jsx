@@ -5,7 +5,7 @@ function Pizza(){
         {pizzaData.map((pizza) => (
           <li className="pizza" key={pizza.name}>
             <div className='pizza'>
-              {pizza.soldOut ? (
+              {pizza.soldOut == true ? (
                 <div className="sold-out">
                   <img src={pizza.photoName} alt={pizza.photoName} />
                 </div>
@@ -16,7 +16,7 @@ function Pizza(){
             <div>
               <h2>{pizza.name}</h2>
               <p>{pizza.ingredients}</p>
-              <span>{pizza.soldOut ? "Sold Out" : `R ${pizza.price}`}</span>
+              <span>{pizza.soldOut == true ? "Sold Out" : `R ${pizza.price}`}</span>
             </div>
           </li>
         ))}
